@@ -1,0 +1,63 @@
+﻿@model List<Gosu.Models.GameModel>
+@{
+    ViewData["Title"] = Gosu.Cores.LanguageHelper.GetText("txt_home");
+    string strListGame = Convert.ToString(ViewData["srtListGame"]);
+}
+
+
+
+
+<main class="container fullcontent" id="main" style="padding-top:120px">
+        <div class="col-5 left">
+        <ul class="list-group w90 show">
+                <a href="/" class="list-group-item list-group-item-action list-group-item-primary">
+                    <i class="fas fa-fw fa-user"></i>  Thông tin đăng nhập
+                </a>
+                <li class="list-group-item list-group-item-action">Quản lý thông tin đăng nhập của bạn</li>
+                <li class="list-group-item list-group-item-action">Tài khoản: <b>kietpeach999</b></li>
+                <li class="list-group-item list-group-item-action">Email: <b>daov******************</b></li>
+                <li class="list-group-item list-group-item-action ">Số điện thoại: <b>038*****94</b></li>
+                <li class="list-group-item list-group-item-action ">  <p>Mật khẩu: <b>*************</b> <a class="right" href="/Account/ChangePassword">[Đổi mật khẩu]</a></p></li>
+            </ul>
+        <div class="list-group w90 show">
+                <a href="/Safe" class="list-group-item list-group-item-action list-group-item-secondary">
+                    <i class="fas fa-fw fa-user-lock"></i>  Bảo mật tài khoản
+                </a>            
+            </div>
+        <div class="list-group w90 show">
+                <a href="/Info" class="list-group-item list-group-item-action list-group-item-secondary">
+                    <i class="fas fa-fw fa-info-circle"></i>  Thông tin chung cá nhân
+                </a>
+            </div>
+        <div class="list-group w90 show">
+                <a class="list-group-item list-group-item-action list-group-item-primary">
+                    <i class="fas fa-fw fa-user-clock"></i>  Hoạt động tài khoản
+                </a>
+                <li class="list-group-item list-group-item-action">Hãy giám sát thường xuyên hơn hoạt động của tài khoản để chắc chắn rằng những thao tác đó chính do bạn thực hiện.</li>
+            </div>
+            <div class="group w90 show bordernon">
+                <div id="gosu-adsgroup-unit-68"></div>
+            </div>
+        </div>
+
+        <div class="col-7 right">
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-action list-group-item-primary">Hoạt động tài khoản</li>
+                <li class="list-group-item">Thiết bị đăng nhập gần đây <a class="right" href="javascript:;">Xem thêm</a></li>
+                <li class="list-group-item">
+                    <form action="/Account/DestroyToken" method="post">
+                        <div>
+                            <label class="label">Đăng xuất tất cả</label>
+                            <div class="value">
+                                <input type="checkbox" name="trust" id="inputAlwaysTrust" class="custom-control-input" value="0">
+                            </div>
+                            <button class="btn btn-primary col-12" type="submit">Xác nhận</button>
+                        </div>
+                    </form>
+                </li>
+            </ul>       
+        </div>
+
+</main>
+@section Scripts {
+    }

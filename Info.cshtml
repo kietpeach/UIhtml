@@ -1,0 +1,202 @@
+﻿@model List<Gosu.Models.GameModel>
+@{
+    ViewData["Title"] = Gosu.Cores.LanguageHelper.GetText("txt_home");
+    string strListGame = Convert.ToString(ViewData["srtListGame"]);
+}
+
+
+
+
+<main class="container fullcontent" id="main" style="padding-top:120px">
+
+        <div class="col-5 left">
+            <ul class="list-group w90 show">
+                <a href="/" class="list-group-item list-group-item-action list-group-item-primary">
+                    <i class="fas fa-fw fa-user"></i>  Thông tin đăng nhập
+                </a>
+                <li class="list-group-item list-group-item-action">Quản lý thông tin đăng nhập của bạn</li>
+                <li class="list-group-item list-group-item-action">Tài khoản: <b>kietpeach999</b></li>
+                <li class="list-group-item list-group-item-action">Email: <b>daov******************</b></li>
+                <li class="list-group-item list-group-item-action ">Số điện thoại: <b>038*****94</b></li>
+                <li class="list-group-item list-group-item-action ">  <p>Mật khẩu: <b>*************</b> <a class="right" href="/Account/ChangePassword">[Đổi mật khẩu]</a></p></li>
+            </ul>
+            <div class="list-group w90 show">
+                <a href="/Safe" class="list-group-item list-group-item-action list-group-item-secondary">
+                    <i class="fas fa-fw fa-user-lock"></i>  Bảo mật tài khoản
+                </a>
+            </div>
+            <div class="list-group w90 show">
+                <a class="list-group-item list-group-item-action list-group-item-primary">
+                    <i class="fas fa-fw fa-info-circle"></i>  Thông tin chung cá nhân
+                </a>
+            </div>
+            <div class="list-group w90 show">
+                <a href="/DeviceActivity" class="list-group-item list-group-item-action list-group-item-secondary">
+                    <i class="fas fa-fw fa-user-clock"></i>  Hoạt động tài khoản
+                </a>
+            </div>
+            <div class="group w90 show bordernon">
+                <div id="gosu-adsgroup-unit-68"></div>
+            </div>
+        </div>
+
+        <div class="col-7 right">
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-action list-group-item-primary">Thông tin cá nhân</li>
+                <li class="list-group-item">Xem và cập nhật thông tin cá nhân của bạn</li>
+                <li class="list-group-item">
+                    <form action="/Account/Info" method="post">
+                        <input name="__RequestVerificationToken" type="hidden" value="9Uuq0ZyGZ9JRAyxB4Gv8G0TUTEPwFw/nzEy6Exqolu4QwCC1YiGr4nYOPYYLhZG2MkI2LBK7mVInRHfDybJP2Sp4bR7gSaRkYIn+Tv7YRmN+3tFGmrJ5Bfamn4mUIQrJJFxQ1CH+3BfF2ltdaZGnTyhKhSs=">
+                        <input value="kietpeach999" type="hidden">
+                        <div>
+                            <label class="label">Họ tên của bạn</label>
+                            <div class="value">
+                                <div class="form-group ">
+                                    <input type="text" class="form-control" placeholder="Họ tên" value=" Đào Văn Kiệt" id="Name" name="Name">
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="label">Giới tính </label>
+                            <div class="value">
+                                <div class="form-group">
+                                    <input type="radio" id="Gender1" name="Gender" value="false">
+                                    <label for="Gender1"><span></span>Nam</label>
+                                    <input type="radio" id="Gender2" name="Gender" value="false">
+                                    <label for="Gender2"><span></span>Nữ</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="label">Ngày sinh </label>
+                            <div class="value">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="far fa-calendar"></i></span>
+                                    </div>
+                                    <input type="text" id="reportrange" name="dateRanger" class="form-control" value="01/01/1900" />
+                                </div>                               
+                            </div>
+                        </div>
+                        <div>
+                            <label class="label">Địa chỉ</label>
+                            <div class="value">
+                                <input type="text" class="form-control" placeholder="Địa chỉ" value=" 141 Cộng Hòa" id="Address" name="Address">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="label">Tỉnh/ Thành phố</label>
+                            <div class="value">
+                                <select class="form-control" id="LocationID" name="LocationID">
+                                    <option value="51">An Giang</option>
+                                    <option value="52">Bà Rịa Vũng Tàu</option>
+                                    <option value="18">Bắc Giang</option>
+                                    <option value="11">Bắc Kạn</option>
+                                    <option selected="selected" value="2">Thành phố Hồ Chí Minh</option>
+                                    <option value="33">Thừa Thiên Huế</option>
+                                    <option value="53">Tiền Giang</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p></p>
+                            <div class="flex center">
+                                <div class="col-6">
+                                    <a href="/" class="btn btn-secondary col-6">Bỏ qua</a>
+                                </div>
+                                <div class="col-6">
+                                    <button class="btn btn-primary col-6" type="submit">Lưu</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </li>
+            </ul>
+        </div>
+
+</main>
+@section Scripts {
+    <script type="text/javascript">
+
+        $("#btnf").click(function () {
+            var chanelid = $("select[name=channelid]").val();
+            var gameid = $("select[name='gameid']").val();
+            var isValid = true;
+            var currentPage = 1;
+            var dateRanger = $("#reportrange").val();
+
+            $(".form-base .form-control").each(function (index) { //required
+                if ($(this).val() == "") {
+                    $(this).addClass("is-invalid");
+                    isValid = false;
+                }
+            });
+            if (isValid) {
+                g.getHistory(chanelid, gameid, dateRanger, currentPage, "#plistH");
+            }
+        });
+
+
+        function loadPage(_cPage, _plat) {
+            var chanelid = $("select[name=channelid]").val();
+            var gameid = $("select[name='gameid']").val();
+            var dateRanger = $("#reportrange").val();
+            _cPage = _plat == 1 ? _cPage + 1 : _cPage - 1;
+            g.getHistory(chanelid, gameid, dateRanger, _cPage, "#plistH");
+        }
+
+
+
+        $(function () {
+
+            var start = moment().subtract(29, 'days');
+            var end = moment();
+
+            function cb(start, end) {
+                $('#reportrange span').html(start.format('D/M/YYYY') + ' - ' + end.format('D/M/YYYY'));
+            }
+
+            $('#reportrange').daterangepicker({
+                singleDatePicker: true,
+                showDropdowns: true,
+                minYear: 1900,
+                maxYear: parseInt(moment().format('YYYY'), 10),
+                locale: {
+                    format: 'DD/MM/YYYY',
+                    "applyLabel": "Duyệt",
+                    "cancelLabel": "Hủy",
+                    "weekLabel": "Tuần",
+                    "customRangeLabel": "Tùy chọn",
+                    "daysOfWeek": [
+                        "Chủ Nhật",
+                        "Hai",
+                        "Ba",
+                        "Tư",
+                        "Năm",
+                        "Sáu",
+                        "Bảy"
+                    ],
+                    "monthNames": [
+                        "Tháng Một",
+                        "Tháng Hai",
+                        "Tháng Ba",
+                        "Tháng Tư",
+                        "Tháng Năm",
+                        "Tháng Sáu",
+                        "Tháng Bảy",
+                        "Tháng Tám",
+                        "Tháng Chín",
+                        "Tháng Mười",
+                        "Tháng Mười Một",
+                        "Tháng Mười Hai"
+                    ],
+                }
+            });
+        });
+    </script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    }

@@ -1,0 +1,147 @@
+﻿@model List<Gosu.Models.GameModel>
+@{
+    ViewData["Title"] = Gosu.Cores.LanguageHelper.GetText("txt_home");
+    string strListGame = Convert.ToString(ViewData["srtListGame"]);
+}
+
+
+
+
+<main class="container fullcontent" id="main" style="padding-top:120px">
+        <div class="col-5 left">
+            <ul class="list-group w90 show">
+                <a href="/" class="list-group-item list-group-item-action list-group-item-primary">
+                    <i class="fas fa-fw fa-user"></i>  Thông tin đăng nhập
+                </a>
+                <li class="list-group-item list-group-item-action">Quản lý thông tin đăng nhập của bạn</li>
+                <li class="list-group-item list-group-item-action">Tài khoản: <b>kietpeach999</b></li>
+                <li class="list-group-item list-group-item-action">Email: <b>daov******************</b></li>
+                <li class="list-group-item list-group-item-action ">Số điện thoại: <b>038*****94</b></li>
+                <li class="list-group-item list-group-item-action ">  <p>Mật khẩu: <b>*************</b> <a class="right" href="/Account/ChangePassword">[Đổi mật khẩu]</a></p></li>
+            </ul>
+            <div class="list-group w90 show">
+                <a class="list-group-item list-group-item-action list-group-item-primary">
+                    <i class="fas fa-fw fa-user-lock"></i>  Bảo mật tài khoản
+                </a>
+                <li class="list-group-item list-group-item-action">Tăng cường độ an toàn tài khoản bằng cách cập nhật đầy đủ các nội dung bảo mật.</li>
+                <li class="list-group-item list-group-item-action">Bảo mật của bạn:</li>
+                @if (true)
+                {
+                    <li class="list-group-item list-group-item-action">
+                        <p class="success">
+                            Đã kích hoạt email <i class="fas fa-fw fa-check-circle"></i>
+                        </p>
+                    </li>
+                }
+                else
+                {
+                    <li class="list-group-item list-group-item-action">
+                        <p class="error">
+                            Chưa kích hoạt email<i class="fas fa-fw fa-exclamation"></i>
+                            <a class="right" href="/Account/ActiveSMS">[Kích hoạt]</a>
+                        </p>
+                    </li>
+                }
+                @if (false)
+                {
+                    <li class="list-group-item list-group-item-action">
+                        <p class="success">
+                            Đã kích hoạt điện thoại <i class="fas fa-fw fa-check-circle"></i>
+                        </p>
+                    </li>
+                }
+                else
+                {
+                    <li class="list-group-item list-group-item-action">
+                        <p class="error">
+                            Chưa kích hoạt điện thoại <i class="fas fa-fw fa-exclamation"></i>
+                            <a class="right" href="/Account/ActiveSMS">[Kích hoạt]</a>
+                        </p>
+                    </li>
+                }
+                @if (true)
+                {
+                    <li class="list-group-item list-group-item-action">
+                        <p class="success">
+                            Đã đặt câu hỏi bảo mật <i class="fas fa-fw fa-check-circle"></i>
+                        </p>
+                    </li>
+                }
+                else
+                {
+                    <li class="list-group-item list-group-item-action">
+                        <p class="error">
+                            Chưa đặt câu hỏi bảo mật <i class="fas fa-fw fa-exclamation"></i>
+                            <a class="right" href="/Account/SecretQuestion">[Đặt câu hỏi bảo mật]</a>
+                        </p>
+                    </li>
+                }
+
+            </div>
+            <div class="list-group w90 show">
+                <a href="/Info" class="list-group-item list-group-item-action list-group-item-secondary">
+                    <i class="fas fa-fw fa-info-circle"></i>  Thông tin chung cá nhân
+                </a>
+            </div>
+            <div class="list-group w90 show">
+                <a href="/DeviceActivity" class="list-group-item list-group-item-action list-group-item-secondary">
+                    <i class="fas fa-fw fa-user-clock"></i>  Hoạt động tài khoản
+                </a>
+            </div>
+            <div class="group w90 show bordernon">
+                <div id="gosu-adsgroup-unit-68"></div>
+            </div>
+        </div>
+        <div class="col-7 right">
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-action list-group-item-primary">Bảo mật tài khoản</li>
+                <li class="list-group-item">Thường xuyên thay những thông tin bảo mật để đảm bảo an toàn bảo mật</li>
+                <li class="list-group-item">
+                    <div>
+                        <label class="label">Email bảo mật</label>
+                        <div class="value ">
+                            daov******************
+                            <a class="right" href="/Account/ChangeEmail">Cập nhật</a>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <label class="label">SĐT bảo mật</label>
+                        <div class="value ">
+                            038*****94
+                            <span>(chưa kích hoạt)</span>
+                            <a class="right" href="/Account/ChangePhone">Cập nhật</a>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <label class="label">Câu hỏi bảo mật</label>
+                        <div class="value ">
+                            ******************
+                            <a class="right" href="/Account/ChangeSecretQuestion">Cập nhật</a>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <label class="label">Mật khẩu game</label>
+                        <div class="value ">
+                            ******
+                            <a class="right" href="/Account/GamePassword">Cài đặt</a>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <label class="label">Chứng minh nhân dân</label>
+                        <div class="value">
+                            <p> ********* </p>
+                            <p>Ngày cấp: 03/0******</p>
+                            <p>Nơi cấp: Quản* **ị</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+
+
+    <div class="clr" id="close"></div>
+
+</main>
+@section Scripts {
+    }

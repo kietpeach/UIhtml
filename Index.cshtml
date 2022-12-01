@@ -1,0 +1,78 @@
+﻿@model List<Gosu.Models.GameModel>
+@{
+    ViewData["Title"] = Gosu.Cores.LanguageHelper.GetText("txt_home");
+    string strListGame = Convert.ToString(ViewData["srtListGame"]);
+}
+
+
+
+
+<div class="container" id="main" style="padding-top:120px">
+        <div class="col-5 left">
+            <ul class="list-group w90 active show">
+                <a href="/" class="list-group-item list-group-item-action list-group-item-primary"><i class="fas fa-fw fa-user"></i>  Thông tin đăng nhập</a>
+                <li class="list-group-item list-group-item-action">Quản lý thông tin đăng nhập của bạn</li>
+                <li class="list-group-item list-group-item-action">Tài khoản: <b>kietpeach999</b></li>
+                <li class="list-group-item list-group-item-action">Email: <b>daov******************</b></li>
+                <li class="list-group-item list-group-item-action ">Số điện thoại: <b>038*****94</b></li>
+                <li class="list-group-item list-group-item-action ">  <p>Mật khẩu: <b>*************</b> <a class="right" href="/Account/ChangePassword">[Đổi mật khẩu]</a></p></li>
+            </ul>
+            <div class="list-group w90 show">
+                <a href="/Safe" class="list-group-item list-group-item-action list-group-item-secondary">
+                    <i class="fas fa-fw fa-user-lock"></i>  Bảo mật tài khoản
+                </a>
+            </div>
+            <div class="list-group w90 show">
+                <a href="/Info" class="list-group-item list-group-item-action list-group-item-secondary">
+                    <i class="fas fa-fw fa-info-circle"></i>  Thông tin chung cá nhân
+                </a>
+            </div>
+            <div class="list-group w90 show">
+                <a href="/DeviceActivity" class="list-group-item list-group-item-action list-group-item-secondary">
+                    <i class="fas fa-fw fa-user-clock"></i>  Hoạt động tài khoản
+                </a>
+            </div>
+            <div class="group w90 show bordernon">
+                <div id="gosu-adsgroup-unit-68"></div>
+            </div>
+        </div>
+
+        <div class="col-7 right">
+            <div class="block-info open">
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-action list-group-item-primary">Thông tin đăng nhập</li>
+                    <li class="list-group-item list-group-item-action">Thông tin đăng nhập tài khoản và đăng nhập game client</li>
+                    <li class="list-group-item">
+                        <form action="/Account" method="post">
+                            <div>
+                                <label class="label">Tên đăng nhập</label>
+                                <div class="value ">
+                                    kietpeach999
+                                </div>
+                            </div>
+                            <div class="line">
+                                <label class="label">Mật khẩu</label>
+                                <div class="value ">
+                                    ********
+                                    <a class="right" href="/Account/ChangePassword">Đổi mật khẩu</a>
+                                </div>
+                            </div>
+                            <div class="line">
+                                <label class="label">Mật khẩu game</label>
+                                <div class="value ">
+                                    ********
+                                    <a class="right" href="/Account/GamePassword">Đổi mật khẩu</a>
+                                </div>
+                            </div>
+                        </form>
+                        <button class="btn btn-primary col-12" href="/Account/DeviceActivity">Đăng xuất tất cả các tài khoản</button>
+                    </li>
+
+                </ul>
+            </div>
+            
+        </div>
+
+</div>
+@section Scripts {
+    }
