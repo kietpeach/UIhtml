@@ -1,0 +1,8 @@
+#wrapper #main  .contact .col-md-4 .heading1{color: #193059}
+#wrapper #main  .contact  .ul .li{display: flex; align-items: center; padding: 10px 0px;}
+#wrapper #main  .contact  .ul .li .icon{
+  width: 30px; height: 30px; border-radius: 100%; background: #193059; text-align: center; line-height: 35px;display: inline-block; margin-right: 15px;
+}
+#wrapper #main  .contact  .ul .li .icon svg{
+  width: 17px; height: 17px; color: white; margin-top: 6px;     vertical-align: sub;
+}

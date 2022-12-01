@@ -1,0 +1,103 @@
+@font-face{font-family:'FontAwesome';src : url('../fonts/fontawesome-webfont.ttf?v=4.3.0') format('truetype');font-weight:normal;font-style:normal; font-display: fallback;}
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+.fa-user-circle{
+    content: "\f2bd";
+}
+
+.fa-facebook-f.lazy-bg-loaded:before {
+    content: "\f09a"; }
+.fa-twitter.lazy-bg-loaded:before {
+    content: "\f099"; }
+.fa-linkedin.lazy-bg-loaded:before {
+    content: "\f0e1"; }
+.fa-youtube.lazy-bg-loaded:before {
+    content: "\f167"; }
+.fa-instagram.lazy-bg-loaded:before {
+    content: "\f16d"; }
+.fa-local.lazy-bg-loaded:before {
+    content: "\f041";
+}
+.fa-yelp.lazy-bg-loaded:before {
+    content: "\f0ac";
+}
+
+.fa-globe.lazy-bg-loaded:before {
+    content: "\f0ac";
+}
+.fa-chevron-up.lazy-bg-loaded:before{
+    content: "\f077";
+}
+.fa-filter.lazy-bg-loaded:after {
+      content: "\f0b0";
+      font: normal normal normal 18px/1 FontAwesome;
+      color: #8d8d8d; }
+.fa-chevron-right.lazy-bg-loaded:after{
+    content: "\f054";
+}
+.fa-chevron-left.lazy-bg-loaded:after{
+    content: "\f053";
+}
+.fa-chevron-down.lazy-bg-loaded:after{
+    content: "\f078";
+}
+.fa-clock.lazy-bg-loaded:before{
+    content: "\f017";
+}
+.fa-phone.lazy-bg-loaded:before{
+    content: "\f095";
+}
+.fa-mail.lazy-bg-loaded:before{
+    content: "\f0e0";
+}
+.fa-check.lazy-bg-loaded:before{
+    content: '\f00c';
+}
+.fa-card.lazy-bg-loaded:before{
+    content: '\f217';
+}
+.fa-linkin:before{
+    content: "\f0e1";
+}
+.fa-search:before{
+    content: "\f002";
+}
+.fa-next-double:before{
+    content: '\f324';
+}
+    
+.fa:hover {
+    color: #c8492c; }
+.fa-none{
+    background: transparent;
+    color: #ffffff;
+}
+.fa-none:hover{
+    background: transparent;
+    color: #ffffff;
+}
+.fa-file-pdf-o.lazy-bg-loaded:before {
+    content: "\f1c1";
+}
+.fa-phone-square.lazy-bg-loaded:before {
+    content: "\f098";
+}
+.tns-controls button[data-controls=prev]:before {
+    font: normal normal normal 14px/1 FontAwesome;
+    content: "\f060";
+    color: #1d3768;
+    margin: auto;
+    margin-left: 9px;
+}
+.tns-controls button[data-controls=next]:before {
+    font: normal normal normal 14px/1 FontAwesome;
+    content: "\f061";
+    color: #1d3768;
+    margin: auto;
+    margin-left: 10px;
+}

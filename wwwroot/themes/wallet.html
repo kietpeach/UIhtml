@@ -1,0 +1,603 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">    
+<title>id.gosu.vn</title>
+<link rel="stylesheet" type="text/css" href="dist/styles.css">
+</head>
+<body>
+	<div id="wrapper">
+        <div class="fullcontent none-padding">
+            <div class="menu-overlay" id="menu-overlay" onclick="closeNav()"><span> x </span></div>
+            <header id="header">
+                <!---menu header-->
+                <div class="col">
+                    <!--boostrap 4-->
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+                        <div class="logo"><a href=""> <img src="images/logo.png" alt="" /> logo</a></div>
+                        <button class="navbar-toggler" onclick="openNav(this)" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse show " >
+                            <ul class="navbar-nav mr-auto margin-auto " id="navbar-nav" >
+                                <!--show menu web-->
+                                <li class="nav-li nav-item " ><a class="nav-link" href="/">Nạp Gosu vào ví</a></li>                              
+                                <li class="nav-li nav-item">
+                                    <a class="nav-link " >Quản lý tài khoản</a>                                   
+                                </li>
+                                <li class="nav-li nav-item " ><a class="nav-link" href="/">Hướng dẫn nạp</a></li>
+                                <li class="nav-li nav-item">
+                                    <a class="nav-link" href="san-pham.html" >Tin tức dịch vụ</a>
+                                </li>
+                                
+                                <li class="nav-li nav-item" >
+                                    <a class="nav-link" href="chung-chi.html" >Hỗ trợ khách hàng</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="nav-righgt">
+                            <ul class="navbar-nav mr-auto margin-auto" >
+                                <!--show menu web-->
+                                <li class="nav-li nav-item text-left">                                   
+                                    <span class="i-con i-con-13 ">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="user" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-user fa-w-14 fa-2x"><path fill="currentColor" d="M313.6 288c-28.7 0-42.5 16-89.6 16-47.1 0-60.8-16-89.6-16C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4zM416 464c0 8.8-7.2 16-16 16H48c-8.8 0-16-7.2-16-16v-41.6C32 365.9 77.9 320 134.4 320c19.6 0 39.1 16 89.6 16 50.4 0 70-16 89.6-16 56.5 0 102.4 45.9 102.4 102.4V464zM224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm0-224c52.9 0 96 43.1 96 96s-43.1 96-96 96-96-43.1-96-96 43.1-96 96-96z" class=""></path></svg> 
+                                    </span>
+                                    tranlephuongnhi                                      
+                                    <span class="d-block">Số dư: 100,0000 GOSU  <a>(thoát)</a></span>                   
+                                </li>
+                                <li >|</li>
+                                <li class="nav-li nav-item"  ><a class="nav-link" data-toggle="modal" data-target="#myModal">Tiếng Việt</a></li>   
+                                
+
+                            </ul>
+
+                        </div>
+                    </nav>
+                    <!---end boostrap 4 --->
+                </div>
+                <!---end menu header-->
+
+            </header>
+            <!--error-->
+            <div id="error" class="modal fade alert " role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-body  alert-msg">
+                            <button type="button" class="close right" data-dismiss="modal">&times;</button>
+                            Bạn cần kích hoạt mail trước khi sử dụng hệ thống
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--error-->
+
+            <!--loadding-->
+            <div class="loading">
+                <div class="spinner-grow text-primary gosu" role="status">
+                    <span class="sr-only"></span>
+                </div>
+            </div>
+            <!--loadding--->        
+            <div class="banner " style='background: url("./images/bg_main.jpg") no-repeat'>                
+            </div>         
+            <main class="container fullcontent" id="main">
+                <div class="row margin-top-100 content">
+                    <div class="form col-md-9 margin-auto ">
+                        <div class="heading1">Nạp GOSU vào ví</div>
+                        <div class="form-base">
+                            <!--form-->
+                            <form method="post">
+                                <div class="heading-1">Chọn kênh thanh toán</div>
+                                <!--List kênh thanh toán-->
+                                <div class="row list">
+                                    <!--item-->
+                                    <div class="col col-sm-20 item item-paytype">
+                                        <input type="radio" id="4t" />
+                                        <label for="4t" class="inter">
+                                            <span class="i-con i-con-25">
+                                                <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="wallet" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-wallet fa-w-16 fa-2x"><path fill="currentColor" d="M384 256c-17.67 0-32 14.33-32 32s14.33 32 32 32 32-14.33 32-32-14.33-32-32-32zm80-160h-16V80c0-26.51-21.49-48-48-48H96C42.98 32 0 74.98 0 128v256c0 53.02 42.98 96 96 96h352c35.35 0 64-28.65 64-64V144c0-26.51-21.49-48-48-48zm16 320c0 17.64-14.36 32-32 32H96c-35.29 0-64-28.71-64-64V128c0-35.29 28.71-64 64-64h304c8.82 0 16 7.18 16 16v16H112c-8.84 0-16 7.16-16 16s7.16 16 16 16h352c8.82 0 16 7.18 16 16v272z" class=""></path></svg>
+                                            </span>
+                                            OnePay
+                                            <span class="checked"></span>
+                                        </label>
+                                    </div>
+                                    <!--item-->
+                                     <!--item-->
+                                     <div class="col col-sm-20 item item-paytype">
+                                        <input type="radio" id="4t" />
+                                        <label for="4t" class="inter">
+                                            <span class="i-con i-con-25">
+                                                <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="wallet" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-wallet fa-w-16 fa-2x"><path fill="currentColor" d="M384 256c-17.67 0-32 14.33-32 32s14.33 32 32 32 32-14.33 32-32-14.33-32-32-32zm80-160h-16V80c0-26.51-21.49-48-48-48H96C42.98 32 0 74.98 0 128v256c0 53.02 42.98 96 96 96h352c35.35 0 64-28.65 64-64V144c0-26.51-21.49-48-48-48zm16 320c0 17.64-14.36 32-32 32H96c-35.29 0-64-28.71-64-64V128c0-35.29 28.71-64 64-64h304c8.82 0 16 7.18 16 16v16H112c-8.84 0-16 7.16-16 16s7.16 16 16 16h352c8.82 0 16 7.18 16 16v272z" class=""></path></svg>
+                                            </span>
+                                            OnePay
+                                            <span class="checked"></span>
+                                        </label>
+                                    </div>
+                                    <!--item-->
+                                     <!--item-->
+                                     <div class="col col-sm-20 item item-paytype">
+                                        <input type="radio" id="4t" />
+                                        <label for="4t" class="inter">
+                                            <span class="i-con i-con-25">
+                                                <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="wallet" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-wallet fa-w-16 fa-2x"><path fill="currentColor" d="M384 256c-17.67 0-32 14.33-32 32s14.33 32 32 32 32-14.33 32-32-14.33-32-32-32zm80-160h-16V80c0-26.51-21.49-48-48-48H96C42.98 32 0 74.98 0 128v256c0 53.02 42.98 96 96 96h352c35.35 0 64-28.65 64-64V144c0-26.51-21.49-48-48-48zm16 320c0 17.64-14.36 32-32 32H96c-35.29 0-64-28.71-64-64V128c0-35.29 28.71-64 64-64h304c8.82 0 16 7.18 16 16v16H112c-8.84 0-16 7.16-16 16s7.16 16 16 16h352c8.82 0 16 7.18 16 16v272z" class=""></path></svg>
+                                            </span>
+                                            OnePay
+                                            <span class="checked"></span>
+                                        </label>
+                                    </div>
+                                    <!--item-->
+                                     <!--item-->
+                                     <div class="col col-sm-20 item item-paytype">
+                                        <input type="radio" id="4t" />
+                                        <label for="4t" class="inter">
+                                            <span class="i-con i-con-25">
+                                                <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="wallet" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-wallet fa-w-16 fa-2x"><path fill="currentColor" d="M384 256c-17.67 0-32 14.33-32 32s14.33 32 32 32 32-14.33 32-32-14.33-32-32-32zm80-160h-16V80c0-26.51-21.49-48-48-48H96C42.98 32 0 74.98 0 128v256c0 53.02 42.98 96 96 96h352c35.35 0 64-28.65 64-64V144c0-26.51-21.49-48-48-48zm16 320c0 17.64-14.36 32-32 32H96c-35.29 0-64-28.71-64-64V128c0-35.29 28.71-64 64-64h304c8.82 0 16 7.18 16 16v16H112c-8.84 0-16 7.16-16 16s7.16 16 16 16h352c8.82 0 16 7.18 16 16v272z" class=""></path></svg>
+                                            </span>
+                                            OnePay
+                                            <span class="checked"></span>
+                                        </label>
+                                    </div>
+                                    <!--item-->
+                                     <!--item-->
+                                     <div class="col col-sm-20 item item-paytype">
+                                        <input type="radio" id="4t" />
+                                        <label for="4t" class="inter">
+                                            <span class="i-con i-con-25">
+                                                <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="wallet" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-wallet fa-w-16 fa-2x"><path fill="currentColor" d="M384 256c-17.67 0-32 14.33-32 32s14.33 32 32 32 32-14.33 32-32-14.33-32-32-32zm80-160h-16V80c0-26.51-21.49-48-48-48H96C42.98 32 0 74.98 0 128v256c0 53.02 42.98 96 96 96h352c35.35 0 64-28.65 64-64V144c0-26.51-21.49-48-48-48zm16 320c0 17.64-14.36 32-32 32H96c-35.29 0-64-28.71-64-64V128c0-35.29 28.71-64 64-64h304c8.82 0 16 7.18 16 16v16H112c-8.84 0-16 7.16-16 16s7.16 16 16 16h352c8.82 0 16 7.18 16 16v272z" class=""></path></svg>
+                                            </span>
+                                            OnePay
+                                            <span class="checked"></span>
+                                        </label>
+                                    </div>
+                                    <!--item-->
+                                     <!--item-->
+                                     <div class="col col-sm-20 item item-paytype">
+                                        <input type="radio" id="4t" />
+                                        <label for="4t" class="inter">
+                                            <span class="i-con i-con-25">
+                                                <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="wallet" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-wallet fa-w-16 fa-2x"><path fill="currentColor" d="M384 256c-17.67 0-32 14.33-32 32s14.33 32 32 32 32-14.33 32-32-14.33-32-32-32zm80-160h-16V80c0-26.51-21.49-48-48-48H96C42.98 32 0 74.98 0 128v256c0 53.02 42.98 96 96 96h352c35.35 0 64-28.65 64-64V144c0-26.51-21.49-48-48-48zm16 320c0 17.64-14.36 32-32 32H96c-35.29 0-64-28.71-64-64V128c0-35.29 28.71-64 64-64h304c8.82 0 16 7.18 16 16v16H112c-8.84 0-16 7.16-16 16s7.16 16 16 16h352c8.82 0 16 7.18 16 16v272z" class=""></path></svg>
+                                            </span>
+                                            OnePay
+                                            <span class="checked"></span>
+                                        </label>
+                                    </div>
+                                    <!--item-->
+                                     <!--item-->
+                                     <div class="col col-sm-20 item item-paytype">
+                                        <input type="radio" id="4t" />
+                                        <label for="4t" class="inter">
+                                            <span class="i-con i-con-25">
+                                                <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="wallet" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-wallet fa-w-16 fa-2x"><path fill="currentColor" d="M384 256c-17.67 0-32 14.33-32 32s14.33 32 32 32 32-14.33 32-32-14.33-32-32-32zm80-160h-16V80c0-26.51-21.49-48-48-48H96C42.98 32 0 74.98 0 128v256c0 53.02 42.98 96 96 96h352c35.35 0 64-28.65 64-64V144c0-26.51-21.49-48-48-48zm16 320c0 17.64-14.36 32-32 32H96c-35.29 0-64-28.71-64-64V128c0-35.29 28.71-64 64-64h304c8.82 0 16 7.18 16 16v16H112c-8.84 0-16 7.16-16 16s7.16 16 16 16h352c8.82 0 16 7.18 16 16v272z" class=""></path></svg>
+                                            </span>
+                                            OnePay
+                                            <span class="checked"></span>
+                                        </label>
+                                    </div>
+                                    <!--item-->
+                                </div>
+                                <!--end List kênh thanh toán-->
+                                <div class="heading-1">Chọn mệnh giá</div>
+                                <!--Tỉ giá-->
+                                <div class="text-center text-rate margin-bottom15">
+                                    <p>Nạp ví Momo, Tỉ lệ nạp: <span class="color-gosu">10.000 vnđ =  100 GOSU</span></p>  
+                                    <p class="color-green">khuyến mãi 10% </p>                                  
+                                </div>
+                                <!--end tỉ giá-->
+
+                                <!--list amoun-->
+                                <div class="row list">
+                                    <!--item-->
+                                    <div class="col col-sm-3 item item-payamount">
+                                        <input type="radio" value="1" name="Amount" id="munber_1" checked="">
+                                        <label class="inter" for="munber_1">
+                                            <div class="text text-center">                                       
+                                                <b> 10,000 <span class="text-small">vnđ</span></b>                                                
+                                            </div>
+                                            <div class="box-ref text-small text-italic">
+                                                95 GOSU
+                                            </div>
+                                            <span class="checked"></span>
+                                            <input id="CurrencyUnit" name="CurrencyUnit" type="hidden" value="USD">
+                                        </label>
+                                    </div>
+                                    <!--item-->
+                                     <!--item-->
+                                     <div class="col col-sm-3 item item-payamount">
+                                        <input type="radio" value="1" name="Amount" id="munber_2" checked="">
+                                        <label class="inter" for="munber_2">
+                                            <div class="text text-center">
+                                                <b> 10,000 <span class="text-small">vnđ</span></b>
+                                            </div>
+                                            <div class="box-ref text-small text-italic">
+                                                95 GOSU
+                                            </div>
+                                            <span class="checked"></span>
+                                            <input id="CurrencyUnit" name="CurrencyUnit" type="hidden" value="USD">
+                                        </label>
+                                    </div>
+                                    <!--item-->
+                                     <!--item-->
+                                     <div class="col col-sm-3 item item-payamount">
+                                        <input type="radio" value="1" name="Amount" id="munber_3" checked="">
+                                        <label class="inter" for="munber_3">
+                                            <div class="text text-center">
+                                                <b> 10,000 <span class="text-small">vnđ</span></b>
+                                            </div>
+                                            <div class="box-ref text-small text-italic">
+                                                95 GOSU
+                                            </div>
+                                            <span class="checked"></span>
+                                            <input id="CurrencyUnit" name="CurrencyUnit" type="hidden" value="USD">
+                                        </label>
+                                    </div>
+                                    <!--item-->
+                                     <!--item-->
+                                     <div class="col col-sm-3 item item-payamount">
+                                        <input type="radio" value="1" name="Amount" id="munber_4" checked="">
+                                        <label class="inter" for="munber_4">
+                                            <div class="text text-center">
+                                                <b> 10,000 <span class="text-small">vnđ</span></b>
+                                            </div>
+                                            <div class="box-ref text-small text-italic">
+                                                95 GOSU
+                                            </div>
+                                            <span class="checked"></span>
+                                            <input id="CurrencyUnit" name="CurrencyUnit" type="hidden" value="USD">
+                                        </label>
+                                    </div>
+                                    <!--item-->
+                                     <!--item-->
+                                     <div class="col col-sm-3 item item-payamount">
+                                        <input type="radio" value="1" name="Amount" id="munber_5" checked="">
+                                        <label class="inter" for="munber_5">
+                                            <div class="text text-center">
+                                                <b> 10,000 <span class="text-small">vnđ</span></b>
+                                            </div>
+                                            <div class="box-ref text-small text-italic">
+                                                95 GOSU
+                                            </div>
+                                            <span class="checked"></span>
+                                            <input id="CurrencyUnit" name="CurrencyUnit" type="hidden" value="USD">
+                                        </label>
+                                    </div>
+                                    <!--item-->
+                                       <!--item-->
+                                       <div class="col col-sm-3 item item-payamount">
+                                        <input type="radio" value="1" name="Amount" id="munber_5" checked="">
+                                        <label class="inter" for="munber_5">
+                                            <div class="text text-center">
+                                                <b> 10,000 <span class="text-small">vnđ</span></b>
+                                            </div>
+                                            <div class="box-ref text-small text-italic">
+                                                95 GOSU
+                                            </div>
+                                            <span class="checked"></span>
+                                            <input id="CurrencyUnit" name="CurrencyUnit" type="hidden" value="USD">
+                                        </label>
+                                    </div>
+                                    <!--item-->
+                                       <!--item-->
+                                       <div class="col col-sm-3 item item-payamount">
+                                        <input type="radio" value="1" name="Amount" id="munber_5" checked="">
+                                        <label class="inter" for="munber_5">
+                                            <div class="text text-center">
+                                                <b> 10,000 <span class="text-small">vnđ</span></b>
+                                            </div>
+                                            <div class="box-ref text-small text-italic">
+                                                95 GOSU
+                                            </div>
+                                            <span class="checked"></span>
+                                            <input id="CurrencyUnit" name="CurrencyUnit" type="hidden" value="USD">
+                                        </label>
+                                    </div>
+                                    <!--item-->
+                                     <!--item-->
+                                     <div class="col col-sm-3 item item-payamount">
+                                        <input type="radio" value="1" name="Amount" id="munber_6" checked="">
+                                        <label class="inter" for="munber_6">
+                                            <div class="text text-center">
+                                                <b class="row"> <input class="form-control" type="text" placeholder="số khác" /> <span class="text-small">vnđ</span></b>
+                                            </div>
+                                            <div class="box-ref text-small text-italic">
+                                                95 GOSU
+                                            </div>
+                                            <span class="checked"></span>
+                                            <input id="CurrencyUnit" name="CurrencyUnit" type="hidden" value="USD">
+                                        </label>
+                                    </div>
+                                    <!--item-->
+                                </div>
+                                <!--end list amoun-->
+
+                                <div class="heading-1">Nhập thông tin thẻ cào</div>
+                                
+                                <div  class="form-account" >
+                                    <div class="form-group">
+                                        <label>Serial</label>
+                                        <input type="text" class="form-control user is-invalid" placeholder="Serial">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Pinnumber</label>
+                                        <input type="text" id="Password" class="form-control "  placeholder="Password">
+                                    </div>
+                                    <div class="form-group">
+                                        <select class="form-control ">
+                                            <option>aaaaaaaaaa</option>
+                                            <option>aaaaaaaaaa</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="align-items-center">
+                                    <button type="submit" class="btn btn-primary btn-base col">nạp thẻ</button>
+                                </div>
+
+
+
+                            </form>
+                            <!--form-->
+                        </div>
+                    </div>
+                </div>
+             
+                
+            </main>
+            <!--Thay đổi thông tin-->           
+            <!--end thay đổi thông tin-->           
+            <!--endmain-->
+            <footer id="footer">
+                <div class="line-footer"></div>
+                <div class="container text-center">
+                    <p>Copyright @ GOSU</p>
+                    <p>Điều khoản | Hướng dẫn | Hỗ trợ | Hỏi đáp</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <script type="text/javascript" src="js/init-page.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+    <!-- <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+    <script type="text/javascript">
+        var cities = [{
+            "id": 1,
+            "cityName": "Amsterdam"
+        }, {
+            "id": 2,
+            "cityName": "Athens"
+        }, {
+            "id": 3,
+            "cityName": "Baghdad"
+        }, {
+            "id": 4,
+            "cityName": "Bangkok"
+        }, {
+            "id": 5,
+            "cityName": "Barcelona"
+        }, {
+            "id": 6,
+            "cityName": "Beijing"
+        }, {
+            "id": 7,
+            "cityName": "Belgrade"
+        }, {
+            "id": 8,
+            "cityName": "Berlin"
+        }, {
+            "id": 9,
+            "cityName": "Bogota"
+        }, {
+            "id": 10,
+            "cityName": "Bratislava"
+        }, {
+            "id": 11,
+            "cityName": "Brussels"
+        }, {
+            "id": 12,
+            "cityName": "Bucharest"
+        }, {
+            "id": 13,
+            "cityName": "Budapest"
+        }, {
+            "id": 14,
+            "cityName": "Buenos Aires"
+        }, {
+            "id": 15,
+            "cityName": "Cairo"
+        }, {
+            "id": 16,
+            "cityName": "CapeTown"
+        }, {
+            "id": 17,
+            "cityName": "Caracas"
+        }, {
+            "id": 18,
+            "cityName": "Chicago"
+        }, {
+            "id": 19,
+            "cityName": "Copenhagen"
+        }, {
+            "id": 20,
+            "cityName": "Dhaka"
+        }, {
+            "id": 21,
+            "cityName": "Dubai"
+        }, {
+            "id": 22,
+            "cityName": "Dublin"
+        }, {
+            "id": 23,
+            "cityName": "Frankfurt"
+        }, {
+            "id": 24,
+            "cityName": "Geneva"
+        }, {
+            "id": 25,
+            "cityName": "Hanoi"
+        }, {
+            "id": 26,
+            "cityName": "Helsinki"
+        }, {
+            "id": 27,
+            "cityName": "Hong Kong"
+        }, {
+            "id": 28,
+            "cityName": "Istanbul"
+        }, {
+            "id": 29,
+            "cityName": "Jakarta"
+        }, {
+            "id": 30,
+            "cityName": "Jerusalem"
+        }, {
+            "id": 31,
+            "cityName": "Johannesburg"
+        }, {
+            "id": 32,
+            "cityName": "Kabul"
+        }, {
+            "id": 33,
+            "cityName": "Karachi"
+        }, {
+            "id": 34,
+            "cityName": "Kiev"
+        }, {
+            "id": 35,
+            "cityName": "Kuala Lumpur"
+        }, {
+            "id": 36,
+            "cityName": "Lagos"
+        }, {
+            "id": 37,
+            "cityName": "Lahore"
+        }, {
+            "id": 38,
+            "cityName": "Lima"
+        }, {
+            "id": 39,
+            "cityName": "Lisbon"
+        }, {
+            "id": 40,
+            "cityName": "Ljubljana"
+        }, {
+            "id": 41,
+            "cityName": "London"
+        }, {
+            "id": 42,
+            "cityName": "Los Angeles"
+        }, {
+            "id": 43,
+            "cityName": "Luxembourg"
+        }, {
+            "id": 44,
+            "cityName": "Madrid"
+        }, {
+            "id": 45,
+            "cityName": "Manila"
+        }, {
+            "id": 46,
+            "cityName": "Marrakesh"
+        }, {
+            "id": 47,
+            "cityName": "Melbourne"
+        }, {
+            "id": 48,
+            "cityName": "Mexico City"
+        }, {
+            "id": 49,
+            "cityName": "Montreal"
+        }, {
+            "id": 50,
+            "cityName": "Moscow"
+        }, {
+            "id": 51,
+            "cityName": "Mumbai"
+        }, {
+            "id": 52,
+            "cityName": "Nairobi"
+        }, {
+            "id": 53,
+            "cityName": "New Delhi"
+        }, {
+            "id": 54,
+            "cityName": "NewYork"
+        }, {
+            "id": 55,
+            "cityName": "Nicosia"
+        }, {
+            "id": 56,
+            "cityName": "Oslo"
+        }, {
+            "id": 57,
+            "cityName": "Ottawa"
+        }, {
+            "id": 58,
+            "cityName": "Paris"
+        }, {
+            "id": 59,
+            "cityName": "Prague"
+        }, {
+            "id": 60,
+            "cityName": "Reykjavik"
+        }, {
+            "id": 61,
+            "cityName": "Riga"
+        }, {
+            "id": 62,
+            "cityName": "Rio de Janeiro"
+        }, {
+            "id": 63,
+            "cityName": "Rome"
+        }, {
+            "id": 64,
+            "cityName": "Saint Petersburg"
+        }, {
+            "id": 65,
+            "cityName": "San Francisco"
+        }, {
+            "id": 66,
+            "cityName": "Santiago de Chile"
+        }, {
+            "id": 67,
+            "cityName": "São Paulo"
+        }, {
+            "id": 68,
+            "cityName": "Seoul"
+        }, {
+            "id": 69,
+            "cityName": "Shanghai"
+        }, {
+            "id": 70,
+            "cityName": "Singapore"
+        }, {
+            "id": 71,
+            "cityName": "Sofia"
+        }, {
+            "id": 85,
+            "cityName": "Zagreb"
+        }];
+        $( "#autocomplete" ).autocomplete({
+            source:function(request, response) {
+                var _regexp = new RegExp(request.term, 'i');
+                var data = cities.filter(function(item) {
+                    return item.cityName.match(_regexp);
+                });
+                response(data);
+            }, // [ "c++", "java", "php", "coldfusion", "javascript", "asp", "ruby" ],
+            appendTo: "#data-list",
+            classes: {
+                "ui-autocomplete": "highlight"
+            },
+            select: function( event, ui ) {
+               // okie alert(this.value)
+            }
+        }).data('ui-autocomplete')._renderItem = function(ul, item) {
+            return $('<li></li>')
+                .data("item.autocomplete", item)
+                .append('<a href="'+item.id+'">' + item.cityName  + '</a>')
+                .appendTo(ul);
+        };
+
+    </script>
+</body>
+</html>
